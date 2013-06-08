@@ -42,6 +42,5 @@ public class ThreadedChannelServer {
         } finally {
             worker.shutdown();
         }
-
     }
 }

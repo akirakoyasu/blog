@@ -21,7 +21,8 @@ public class Bytes {
         copy(Channels.newChannel(from), Channels.newChannel(to));
     }
 
-    public static void copy(ReadableByteChannel from, WritableByteChannel to) throws IOException {
+    public static void copy(ReadableByteChannel from, WritableByteChannel to)
+            throws IOException {
         ByteBuffer buf = ByteBuffer.allocate(BUF_SIZE);
         while (from.read(buf) >= 0 || buf.position() != 0) {
             buf.flip();
